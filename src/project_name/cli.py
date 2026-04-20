@@ -10,6 +10,8 @@ from loguru import logger
 
 from project_name.core import increase
 
+from config import config1
+
 
 def main():
     """
@@ -36,6 +38,8 @@ def main():
     result = increase(a, b)
 
     logger.info(f"Result: {a} + {b} = {result}")
+
+    logger.info(f"Config value from config1.toml: {config1['server']['url']}")
 
 
 if __name__ == "__main__":
